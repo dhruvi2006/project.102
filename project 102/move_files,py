@@ -1,0 +1,25 @@
+import os 
+import shutil
+from_dir = ""
+to_dir = ""
+list_files = os.listdir(from_dir) #(command or directory or method)
+print(list_files)
+for file_name in list_files:
+    name,extension = os.path.splitext(file_name)
+    #print(name)
+    #print(extension)
+    if extension == " ":
+        countinue
+    if extension in ['.txt','.doc', '.pdf', '.docx']:
+        path1 = from_dir + '/' + file_name
+        path2 = to_dir + '/' + 'doc-list' 
+        path3 = to_dir + '/' + 'doc-list' + '/' + file_name
+        #print(path1,path2,path3)
+        if os.path.exists(path2):
+            print('moving' + file_name)
+            shutil.move(path1,path3)
+        else:
+            print('moving' + file_name)
+            shutil.move(path1,path3)
+
+    
